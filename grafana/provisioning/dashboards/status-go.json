@@ -1199,8 +1199,8 @@
       "targets": [
         {
           "disableTextWrap": false,
-          "editorMode": "builder",
-          "expr": "avg_over_time(statusgo_waku_messages_sent_total_count[10m])",
+          "editorMode": "code",
+          "expr": "avg_over_time(statusgo_waku_messages_sent_total[10m])",
           "fullMetaSearch": false,
           "includeNullMetadata": false,
           "interval": "",
@@ -1266,7 +1266,7 @@
         {
           "disableTextWrap": false,
           "editorMode": "builder",
-          "expr": "statusgo_waku_raw_message_sent_total",
+          "expr": "statusgo_waku_envelope_sent_total",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "legendFormat": "{{message_type}}",
