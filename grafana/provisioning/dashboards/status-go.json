@@ -1240,7 +1240,7 @@
         },
         "tooltip": {
           "hideZeros": false,
-          "mode": "single",
+          "mode": "multi",
           "sort": "none"
         }
       },
@@ -1249,7 +1249,7 @@
         {
           "disableTextWrap": false,
           "editorMode": "code",
-          "expr": "rate(statusgo_waku_raw_message_size_bytes[10m])",
+          "expr": "sum by (message_type) (rate(statusgo_waku_raw_message_size_bytes[10m])) ",
           "fullMetaSearch": false,
           "includeNullMetadata": false,
           "legendFormat": "{{message_type}}",
